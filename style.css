@@ -1,0 +1,160 @@
+:root {
+  --color-primary: hsl(257, 40%, 49%);
+  --color-secondary: hsl(300, 69%, 71%);
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.container {
+  background-image: url(bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: var(--color-primary);
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    background-image: url(bg-desktop.svg);
+    background-size: cover;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem;
+    height: 100vh;
+  }
+}
+
+.margin-and-padding-0 {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  padding: 1.5rem 7rem;
+  border-radius: 20px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.callout--header {
+  justify-self: start;
+  align-self: flex-start;
+}
+
+.header__logo {
+  width: 125px;
+  margin-bottom: 3rem;
+}
+
+.header__image {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .callout--header {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+    height: 100%;
+    margin-left: 5rem;
+  }
+  .header__logo {
+    width: 300px;
+  }
+  .header__image {
+    margin-top: 10rem;
+  }
+}
+
+.middle__section {
+  margin-top: 6rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 1.5rem;
+}
+
+.section__tittle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.middle__info {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.middle__btn {
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin: 2rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.386);
+  transition: all 0.25s;
+}
+
+.middle__btn:hover {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+@media screen and (min-width: 1440px) {
+  .middle__section {
+    text-align: left;
+    margin-top: 25rem;
+    margin-left: -10rem;
+  }
+
+  .section__tittle {
+    max-width: 300px;
+  }
+
+  .middle__info {
+    max-width: 500px;
+  }
+
+  .middle__btn {
+    margin-left: 0;
+  }
+}
+
+.icon {
+  margin: 1rem;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+
+.fa-facebook-f {
+  padding: 0.5rem 0.7rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .bottom__section {
+    justify-self: end;
+    align-self: flex-end;
+  }
+}
